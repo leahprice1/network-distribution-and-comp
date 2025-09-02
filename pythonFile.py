@@ -1,9 +1,13 @@
-'''
+"""
+pythonFile.py
+--
 Name: Leah Price
-Date: 9/3/2025
-'''
+Sept 2, 2025
+Desc: Solution to Python Problem Set 1
 
+"""
 import math
+import string
 
 def hello(string, num = 0):
     st = "Hello " + string 
@@ -98,78 +102,56 @@ class SwearJar:
         self.pissed = 0
         self.shit = 0
         self.said = ""
-    
-
 
 if __name__ == "__main__":
     
     #------------------------------- HELLO FUNCTION -------------------------------
 
-    print("hello function: \n")
-    print("Hello Talaga 1 time.")
-    hello("Talaga")
-    print()
-    print("Hello Cherry 3 times.")
-    hello("Cherry", 3)
-    print()
+  print("\nhello-function")
+  print("\nHello Bob 1 time")
+  hello("Bob")
 
-    #------------------------------- SUMCHARS FUNCTION -------------------------------
+  print("\nHello Bill 5 times")
+  hello("Bill", 5)
 
-    print("sumChars function: \n")
-    print(f'131 = {str(sumChars("131"))}')
-    print(f'130 = {str(sumChars("130"))}')
-    print(f'65 = {str(sumChars("65"))}')
-    print()
-    
-    #------------------------------- SUMCHARS FUNCTION -------------------------------
+  print("\nsumChars")
+  print("65 = {}".format(sumChars("A")))
+  print("130 = {}".format(sumChars("AA")))
+  print("131 = {}".format(sumChars("AB")))
+  print("131 = {}".format(sumChars("BA")))
 
-    print("isPrime function: \n")
+  print("\nisPrime")
+  print("True = {}".format(isPrime(7)))
+  print("True = {}".format(isPrime(2)))
+  print("False = {}".format(isPrime(6)))
 
-    if isPrime(7):
-        print("7 is prime")
-    else:
-        print("7 is not prime")
-    
-    if isPrime(6):
-        print("6 is prime")
-    else:
-        print("6 is not prime")
+  print("\ncaesarEncrypt")
+  print("bcdea = {}".format(caesarEncrypt("abcdz", 1)))
+  print("BCDEA = {}".format(caesarEncrypt("ABCDZ", 1)))
+  print("bc?de. = {}".format(caesarEncrypt("ab?cd.", 1)))
+  print("abcd = {}".format(caesarEncrypt("efgh", -4)))
 
-    if isPrime(5):
-        print("5 is prime")
-    else:
-        print("5 is not prime")
-   #------------------------------- CAESARENCRYPT FUNCTION -------------------------------
-     
-    print("caesarEncrypt function: \n")
-    print(f"This is the origninal = {caesarEncrypt("This is the orginal.", 3)}")
-    print(f"Leah is the best = {caesarEncrypt("Leah is the best", -1)}")
-    print(f"Computer Science is fun!!! = {caesarEncrypt("Computer Science is fun!!!", 1)}")
-    print(f"ABCdefg = {caesarEncrypt("ABCdefg", 1)}")
+  print("\nNo words given, should be all 0's.")
+  sw = SwearJar()
+  sw.reportCard()
 
-    
-   #------------------------------- SWEARJAR CLASS -------------------------------
+  print("\nThis is a damn sentence.")
+  sw = SwearJar()
+  sw.say("This is a damn sentence.")
+  sw.reportCard()
+  sw.soap()
+  print("\nSoap() called\n")
+  print("This shITty homework will be the end of me.")
+  print("The icecream in this damn town is bloody Shit.")
+  sw.say("This shITty homework will be the end of me.")
+  sw.say("The icecream in this damn town is bloody Shit.")
+  sw.reportCard()
 
-    print("SwearJar class: \n")
-
-    classswears = SwearJar()
-
-    string = "Damn, this is fun."
-    print(string)
-    classswears.say(string)
-    classswears.reportCard()
-    print()
-
-    print("Using soap!")
-    classswears.soap()
-    classswears.reportCard()
-    print()
-
-    string = "The icecream in this damn town is bloody Shit."
-    print(string)
-    classswears.say(string)
-    classswears.reportCard()
-    print()
+  print("\nNo words given, should be all 0's.")
+  sw = SwearJar()
+  sw.say("This damn assignment is bloddy bullshit.")
+  sw.say("Python is a craptastic language that makes me pissed")
+  sw.say("to program.")
 
     
 
